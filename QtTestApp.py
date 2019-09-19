@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
 
 
     def HelloWorld(MainWindow):
-        print("Hello world")
+        print("Hello wereld")
 
 
 if __name__ == "__main__":
