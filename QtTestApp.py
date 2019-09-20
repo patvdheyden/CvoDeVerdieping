@@ -9,7 +9,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'C:/temp/FromDesignMPWtVW.ui'
@@ -47,35 +46,35 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton {\n"
-"    color: #333;\n"
-"    border: 2px solid #555;\n"
-"    border-radius: 20px;\n"
-"    border-style: outset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #888\n"
-"        );\n"
-"    padding: 5px;\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
-"        );\n"
-"    }")
+                                      "    color: #333;\n"
+                                      "    border: 2px solid #555;\n"
+                                      "    border-radius: 20px;\n"
+                                      "    border-style: outset;\n"
+                                      "    background: qradialgradient(\n"
+                                      "        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+                                      "        radius: 1.35, stop: 0 #fff, stop: 1 #888\n"
+                                      "        );\n"
+                                      "    padding: 5px;\n"
+                                      "    }\n"
+                                      "\n"
+                                      "QPushButton:hover {\n"
+                                      "    background: qradialgradient(\n"
+                                      "        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+                                      "        radius: 1.35, stop: 0 #fff, stop: 1 #bbb\n"
+                                      "        );\n"
+                                      "    }\n"
+                                      "\n"
+                                      "QPushButton:pressed {\n"
+                                      "    border-style: inset;\n"
+                                      "    background: qradialgradient(\n"
+                                      "        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+                                      "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
+                                      "        );\n"
+                                      "    }")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../Pictures/Barcode-Scanner-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Printer-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
-        self.pushButton.setIconSize(QtCore.QSize(25, 25))
+        self.pushButton.setIconSize(QtCore.QSize(40, 40))
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -95,15 +94,13 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "Print Message"))
 
-
-
-
     def HelloWorld(MainWindow):
         print("Hello 1")
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
