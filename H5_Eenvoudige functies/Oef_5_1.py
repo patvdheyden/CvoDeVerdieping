@@ -1,11 +1,5 @@
-from typing import Any, Union
-
-from termcolor import colored
-from math import sqrt, exp, log
-import numpy
 import GlobaleFuncties as GF
-import pcinput as PCI
-from random  import random
+azaz
 # Oefening 5.1 #
 print("")
 print("### Oef 5.1: Bereken de lengte van een string ###")

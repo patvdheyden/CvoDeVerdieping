@@ -1,11 +1,5 @@
-from typing import Any, Union
-
-from termcolor import colored
-from math import sqrt, exp, log
-import numpy
 import GlobaleFuncties as GF
 import pcinput as PCI
-from random  import random
 
 # Oefening 5.3 #
 print("")

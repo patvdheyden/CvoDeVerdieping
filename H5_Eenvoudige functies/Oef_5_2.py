@@ -1,11 +1,7 @@
-from typing import Any, Union
+from math import sqrt
 
-from termcolor import colored
-from math import sqrt, exp, log
-import numpy
 import GlobaleFuncties as GF
-import pcinput as PCI
-from random  import random
+
 # Oefening 5.2 #
 print("")
 print("### Oef 5.2: Bereken de lengte van een string van de schuine zijde van een rechthoekige driehoek ###")
