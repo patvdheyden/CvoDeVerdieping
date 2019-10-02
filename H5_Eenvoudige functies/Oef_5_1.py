@@ -1,5 +1,5 @@
 import GlobaleFuncties as GF
-azaz
+
 # Oefening 5.1 #
 print("")
 print("### Oef 5.1: Bereken de lengte van een string ###")
