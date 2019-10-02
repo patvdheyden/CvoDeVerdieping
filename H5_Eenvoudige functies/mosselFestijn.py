@@ -20,9 +20,18 @@ totaal_te_betalen += aantal_koninginne_hapje * prijs_koninginne_hapje
 totaal_te_betalen += aantal_ijs * prijs_ijs
 totaal_te_betalen += aantal_drank * prijs_drank
 
-str_te_betalen = "Totaal te betalen : " + str(totaal_te_betalen) + " euro"
+
 print("")
-print(GF.box(5,6, str_te_betalen ))
+
+str_format = "{:<30}{:>8}{:>8} euro"
+str_mosselen = str_format.format("Aantal mosselen-friet", aantal_mossel_met_frietjes , aantal_mossel_met_frietjes * prijs_mossel_met_frietjes)
+str_kon_hapje = str_format.format("Aantal koninginnehapje", aantal_koninginne_hapje , aantal_koninginne_hapje * prijs_koninginne_hapje)
+str_drank = str_format.format("Aantal drankjes", aantal_drank , aantal_drank * prijs_drank)
+str_ijs = str_format.format("Aantal ijs", aantal_ijs , aantal_ijs * prijs_ijs)
+str_te_betalen = "{:<38}{:>8} euro".format("Totaal te betalen : " , totaal_te_betalen)
+str_lijn = "{:<41}{:>10}".format(".", "==========")
+
+print(GF.box(5,6, str_mosselen, str_kon_hapje, str_drank, str_ijs,str_lijn , str_te_betalen ))
 print("")
 ontvangen_bedrag = input("Geef het ontvangen bedrag in: ")
 ontvangen_bedrag = int(ontvangen_bedrag)
