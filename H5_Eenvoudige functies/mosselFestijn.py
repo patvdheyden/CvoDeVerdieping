@@ -23,15 +23,15 @@ totaal_te_betalen += aantal_drank * prijs_drank
 
 print("")
 
-str_format = "{:<30}{:>8}{:>8} euro"
+str_format = "{:<30}{:>4}{:>8}"
 str_mosselen = str_format.format("Aantal mosselen-friet", aantal_mossel_met_frietjes,
-                                 aantal_mossel_met_frietjes * prijs_mossel_met_frietjes)
+                                 aantal_mossel_met_frietjes * prijs_mossel_met_frietjes,"€")
 str_kon_hapje = str_format.format("Aantal koninginnehapje", aantal_koninginne_hapje,
-                                  aantal_koninginne_hapje * prijs_koninginne_hapje)
-str_drank = str_format.format("Aantal drankjes", aantal_drank, aantal_drank * prijs_drank)
-str_ijs = str_format.format("Aantal ijs", aantal_ijs, aantal_ijs * prijs_ijs)
-str_te_betalen = str_format.format("Totaal te betalen : ", "", totaal_te_betalen)
-str_lijn = "{:<41}{:>10}".format(".", "==========")
+                                  aantal_koninginne_hapje * prijs_koninginne_hapje,"€")
+str_drank = str_format.format("Aantal drankjes", aantal_drank, aantal_drank * prijs_drank,"€")
+str_ijs = str_format.format("Aantal ijs", aantal_ijs, aantal_ijs * prijs_ijs,"€")
+str_te_betalen = str_format.format("Totaal te betalen : ", "", totaal_te_betalen,"€")
+str_lijn = str_format.format(".", "", "========")
 
 print(GF.box(5, 6, str_mosselen, str_kon_hapje, str_drank, str_ijs, str_lijn, str_te_betalen))
 print("")
