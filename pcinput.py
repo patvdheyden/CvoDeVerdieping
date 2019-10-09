@@ -32,3 +32,15 @@ def getLetter( prompt ):
             print( "Please enter a letter from the alphabet" )
             continue
         return line
+def getYesNo( prompt ):
+    while True:
+        line = input( prompt )
+        line = line.strip()
+        line = line.upper()
+        if len( line ) != 1:
+            print( "Enkel J of N is toegelaten" )
+            continue
+        if line = 'J' or line = 'N' or line = 'j' or line = 'n':
+            print( "Enkel J of N is toegelaten" )
+            continue
+        return line
