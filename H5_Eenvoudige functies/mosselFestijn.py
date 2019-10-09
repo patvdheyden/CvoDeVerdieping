@@ -21,25 +21,25 @@ totaal_te_betalen += aantal_koninginne_hapje * prijs_koninginne_hapje
 totaal_te_betalen += aantal_ijs * prijs_ijs
 totaal_te_betalen += aantal_drank * prijs_drank
 
-
 print("")
 
 str_format = "{:<30}{:>8}{:>8} euro"
-str_mosselen = str_format.format("Aantal mosselen-friet", aantal_mossel_met_frietjes , aantal_mossel_met_frietjes * prijs_mossel_met_frietjes)
-str_kon_hapje = str_format.format("Aantal koninginnehapje", aantal_koninginne_hapje , aantal_koninginne_hapje * prijs_koninginne_hapje)
-str_drank = str_format.format("Aantal drankjes", aantal_drank , aantal_drank * prijs_drank)
-str_ijs = str_format.format("Aantal ijs", aantal_ijs , aantal_ijs * prijs_ijs)
-str_te_betalen = str_format.format("Totaal te betalen : ","" , totaal_te_betalen)
+str_mosselen = str_format.format("Aantal mosselen-friet", aantal_mossel_met_frietjes,
+                                 aantal_mossel_met_frietjes * prijs_mossel_met_frietjes)
+str_kon_hapje = str_format.format("Aantal koninginnehapje", aantal_koninginne_hapje,
+                                  aantal_koninginne_hapje * prijs_koninginne_hapje)
+str_drank = str_format.format("Aantal drankjes", aantal_drank, aantal_drank * prijs_drank)
+str_ijs = str_format.format("Aantal ijs", aantal_ijs, aantal_ijs * prijs_ijs)
+str_te_betalen = str_format.format("Totaal te betalen : ", "", totaal_te_betalen)
 str_lijn = "{:<41}{:>10}".format(".", "==========")
 
-print(GF.box(5,6, str_mosselen, str_kon_hapje, str_drank, str_ijs,str_lijn , str_te_betalen ))
+print(GF.box(5, 6, str_mosselen, str_kon_hapje, str_drank, str_ijs, str_lijn, str_te_betalen))
 print("")
 ontvangen_bedrag = input("Geef het ontvangen bedrag in: ")
 ontvangen_bedrag = int(ontvangen_bedrag)
 
 wissel_geld = ontvangen_bedrag - totaal_te_betalen
 str_wisselen = "Terug te betalen " + str(wissel_geld) + " euro"
-
 
 resultaat_200_euro = wissel_geld // 200
 rest_200_euro = wissel_geld % 200
@@ -76,5 +76,5 @@ str_resultaat_5 = str_format.format(5, resultaat_5_euro)
 str_resultaat_2 = str_format.format(2, resultaat_2_euro)
 str_resultaat_1 = str_format.format(1, resultaat_1_euro)
 
-
-print(GF.box(5,6, str_resultaat_200, str_resultaat_100, str_resultaat_50,str_resultaat_20,str_resultaat_10,str_resultaat_5,str_resultaat_2,str_resultaat_1 ))
+print(GF.box(5, 6, str_resultaat_200, str_resultaat_100, str_resultaat_50, str_resultaat_20, str_resultaat_10,
+             str_resultaat_5, str_resultaat_2, str_resultaat_1))

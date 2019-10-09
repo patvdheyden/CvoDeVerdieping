@@ -1,12 +1,6 @@
-from typing import Any, Union
+from math import exp
 
-from termcolor import colored
-from math import sqrt, exp, log
-import numpy
 import GlobaleFuncties as GF
-import pcinput as PCI
-from random  import random
-
 
 # Oefening 5.4 #
 print("")
@@ -14,7 +8,10 @@ print("### Oef 5.4: Berekenen de waardes van e tot de macht x  ###")
 
 
 def expformated(a):
-    resultaat_ef = "De waarde van e tot de macht " + str(a) + " is " + str("{:.5f}".format(exp(a)))
+    str_format = "De waarde van e tot de macht {:>2} is "
+    #  resultaat_ef = str_format.format(str(a)) + " is " + str("{:2.5f}".format(exp(a)))
+    resultaat_ef = str_format.format(str(a)) + " is " + str(f"{exp(a):9.5f}")
+
     return resultaat_ef
 
 
