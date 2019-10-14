@@ -39,10 +39,7 @@ def getYesNo( prompt ):
         line = input( prompt )
         line = line.strip()
         line = line.upper()
-        if len( line ) != 1:
-            print( "Enkel J of N is toegelaten" )
-            continue
-        if line == 'J' or line == 'N' or line == 'j' or line == 'n':
+        if line != 'J' and  line != 'N':
             print( "Enkel J of N is toegelaten" )
             continue
         return line

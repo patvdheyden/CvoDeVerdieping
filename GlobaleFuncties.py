@@ -1,4 +1,5 @@
 from termcolor import colored
+import sys
 
 UL, UR = '╔', '╗'
 SL, SR = '╠', '║'
@@ -7,7 +8,7 @@ AL, AR = '═', '>'
 
 
 def padded(
-    line, info=None, width=100, intro='>', outro='<', filler='.', chopped='..'
+        line, info=None, width=100, intro='>', outro='<', filler='.', chopped='..'
 ):
     # cleanup input
     line = ''.join([' ', line.strip()]) if line else ''
@@ -17,11 +18,11 @@ def padded(
     width -= sum([len(intro), len(outro), len(line), len(info)])
     if width < 0:
         # chop off overflowing text
-        line = line[:len(line)+width]
+        line = line[:len(line) + width]
         if chopped:
             # place chopped characters (if set)
             chopped = chopped.strip()
-            line = ' '.join([line[:len(line)-(len(chopped)+1)], chopped])
+            line = ' '.join([line[:len(line) - (len(chopped) + 1)], chopped])
 
     return ''.join(e for e in [
         intro,
@@ -33,11 +34,11 @@ def padded(
 
 
 def box(rnum, nbeds, *extras):
-    arrow = (AL+AR)
+    arrow = (AL + AR)
     res = [
         # head line
         padded(
-           'Hfst. {:03d} <'.format(rnum), (AL+AL+arrow),
+            'Hfst. {:03d} <'.format(rnum), (AL + AL + arrow),
             intro=UL, outro=UR, filler=AL
         ),
         # first line
@@ -52,3 +53,10 @@ def box(rnum, nbeds, *extras):
     res.append(padded(None, None, intro=DL, outro=DR, filler=AL))
 
     return '\n'.join(res)
+
+
+def print_there(x, y, text):
+    sys.stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (x, y, text))
+    sys.stdout.flush()
+
+
