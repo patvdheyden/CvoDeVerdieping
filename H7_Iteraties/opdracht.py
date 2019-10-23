@@ -1,9 +1,9 @@
-from pcinput import getInteger, getLetter
+from pcinput import getInteger, getLetter, getString
 
-
+bediende = getString("Wat is uw naam? ")
 in_kassa = getInteger("Wat zit er in uw kassa? (Begingeld): ")
 loop_antwoord = "N"
-while loop_antwoord == "N":
+while loop_antwoord != "J":
 
     aantal_mosselen = getInteger("Geef het aantal mosselen-friet in: ")
     aantal_khapje = getInteger("Geef het aantal koninginnehapjes in: ")
@@ -76,4 +76,5 @@ while loop_antwoord == "N":
         print("Gezondheid !!!")
     in_kassa += bedrag_tebetalen
     loop_antwoord = getLetter("Wilt u stoppen? (J/N)")
-    print("Er zit ", in_kassa, "€ in de kassa")
+
+    print(bediende , "er zit ", in_kassa, "€ in uw kassa")
