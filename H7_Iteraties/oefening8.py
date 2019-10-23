@@ -12,4 +12,8 @@ for i in range(10):
         cijfer_percent += 10
 
 print("U heeft", cijfer_percent, "% behaald")
+if cijfer_percent >= 50:
+    print("u bent geslaagt")
+else:
+    print("Helaas niet geslaagd")
 
